@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>案例</title>
+	<style>		
+		canvas {
+			background: url('imgs/index.png') no-repeat 50%;
+		}
+		#content {
+			width: 960px;
+			height: 800px;
+			margin:0 auto;			
+			background: url('imgs/bg.jpg') no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<div id="content">		
+	</div>	
+</body>
+<script src="js/main.js"></script>
+<script>	
+	var w = 960,
+		h = 600;
+	animate({
+		target: '#content', // 必须设置canvas容器
+		canvasWidth: w,		// canvas宽度
+		canvasHeight: h,    // cnavas高度
+		speed: 1,			// 动画速度，单位为角度
+		data: {				// 绘制图像所需数据
+			title: 'WEB全栈',   	// 球体的中心文字
+			font: 20,				// 文字字体大小
+			radius: 65,				// 设置球体半径
+			border: 50,				// 设置球体线宽
+			borderColor: 'rgba(42, 52, 102, .1)',  // 设置球体描边颜色
+			fillColor: 'rgba(42, 52, 102, 1)',     // 设置球体填充颜色
+			position: {							   // 球体圆心位置
+				x: w / 2,
+				y: h / 2
+			},
+			skills: [{
+				radius: 120,		// 设置内层球体运动的圆弧轨迹的半径
+				child: [{
+					title: 'Node.js',
+					font: 12,
+					angle: 0,
+					radius: 33,
+					border: 22,
+					borderColor: 'rgba(249, 77, 90, .1)',
+					fillColor: 'rgba(249, 77, 90, .7)',
+					position: {
+						x: 0,
+						y: 0
+					}
+				}, {
+					title: 'HTML5',
+					font: 12,
+					angle: 90,
+					radius: 36,
+					border: 22,
+					borderColor: 'rgba(111, 188, 228, .1)',
+					fillColor: 'rgba(111, 188, 228, .7)',
+					position: {
+						x: 0,
+						y: 0
+					}
+				}, {
+					title: 'CSS3',
+					font: 12,
+					angle: 180,
+					radius: 34,
+					border: 22,
+					borderColor: 'rgba(160, 225, 172, .1)',
+					fillColor: 'rgba(160, 225, 172, .7)',
+					position: {
+						x: 0,
+						y: 0
+					}
+				}, {
+					title: 'jQuery',
+					font: 12,
+					angle: 270,
+					radius: 32,
+					border: 22,
+					borderColor: 'rgba(189, 72, 238, .1)',
+					fillColor: 'rgba(189, 72, 238, .7)',
+					position: {
+						x: 0,
+						y: 0
+					}
+				}]
+			}, {
+				radius: 215,  		 // 设置外层球体运动的圆弧轨迹的半径
+				child: [{
+					title: 'React.js',
+					font: 12,
+					angle: 0,
+					radius: 38,
+					border: 22,
+					borderColor: 'rgba(228, 52, 106, .1)',
+					fillColor: 'rgba(228, 52, 106, .7)',
+					position: {
+						x: 0,
+						y: 0
+					}
+				}, {
+					title: 'Canvas',
+					font: 12,
+					angle: 72,
+					radius: 35,
+					border: 22,
+					borderColor: 'rgba(233, 240, 29, .1)',
+					fillColor: 'rgba(233, 240, 29, .7)',
+					position: {
+						x: 0,
+						y: 0
+					}
+				}, {
+					title: 'Zepto.js',
+					font: 12,
+					angle: 144,
+					radius: 43,
+					border: 22,
+					borderColor: 'rgba(49, 141, 255, .1)',
+					fillColor: 'rgba(49, 141, 255, .7)',
+					position: {
+						x: 0,
+						y: 0
+					}
+				}, {
+					title: 'WebApp',
+					font: 12,
+					angle: 216,
+					radius: 45,
+					border: 22,
+					borderColor: 'rgba((77, 161, 189, .1)',
+					fillColor: 'rgba(77, 161, 189, .7)',
+					position: {
+						x: 0,
+						y: 0
+					}
+				}, {
+					title: 'Angular.js',
+					font: 12,
+					radius: 40,
+					angle: 288,
+					border: 22,
+					borderColor: 'rgba(207, 39, 130, .1)',
+					fillColor: 'rgba(207, 39, 130, 1)',
+					position: {
+						x: 0,
+						y: 0
+					}
+				}]
+			}]
+		}
+	}).render();
+</script>
+</html>
